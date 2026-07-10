@@ -1,0 +1,11 @@
+services:
+  when3meet:
+    build: .
+    ports:
+      - "5173:5173"
+    volumes:
+      - when3meet-data:/app/.data
+    restart: unless-stopped
+
+volumes:
+  when3meet-data:
